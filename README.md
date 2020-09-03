@@ -3,6 +3,8 @@ A simple scraper to download csv from any airtable shared view programatically, 
 Use it if:
 - You want to download a shared view periodically
 - You don't mind the shared view to be accessed basically without authorization
+If You want to know how it works, feel free to fire up the notebooks [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](banditelol/airscraper/blob/master/notebook/Airtable%20Scraping%20CSV.ipynb]
+
 
 ## Requirements
 Because its a simple scraper, basically only beautifulsoup is needed
