@@ -1,4 +1,4 @@
-# scraping-airtable
+# Airscraper
 A simple scraper to download csv from any airtable shared view programatically, think of it as a programatic way of downloading csv from airtable shared view.
 Use it if:
 - You want to download a shared view periodically
