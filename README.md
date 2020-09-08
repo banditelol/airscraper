@@ -38,7 +38,9 @@ pip install --user --upgrade twine
 - run the code
   - `python airscraper/airscraper.py [url]`
 
-## Examples
+## Usage
+
+Create a [shared view link](https://support.airtable.com/hc/en-us/articles/205752117-Creating-a-base-share-link-or-a-view-share-link#viewsharelink) and use that link to download the shared view into csv. All `[url]` mentioned in the examples are referring to the shared view link you get from this step.
 
 ### As CLI
 
