@@ -1,5 +1,6 @@
 # Airscraper
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/banditelol/airscraper/blob/master/notebook/Airtable%20Scraping%20CSV.ipynb)
+[![PyPI version](https://badge.fury.io/py/airscraper.svg)](https://badge.fury.io/py/airscraper)
 
 A simple scraper to download csv from any airtable shared view programatically, think of it as a programatic way of downloading csv from airtable shared view.
 Use it if:
@@ -10,12 +11,11 @@ Use it if:
 Because its a simple scraper, basically only beautifulsoup is needed
 - BeautifulSoup4
 
-## Usage
-- Clone this project
-- Install the requirements
-  - `pip install -r requirements.txt`
-- run the code
-  - `python airscraper/airscraper.py [url]`
+## Installation
+
+### Using pip (Recommended)
+
+`pip install airscraper`
 
 ### Build From Source
 - Install build dependencies:
@@ -31,7 +31,17 @@ pip install --user --upgrade twine
 - Use it without adding python in front of it
   - `airscraper [url]`
 
+### Direct Execution (Testing Purpose)
+- Clone this project
+- Install the requirements
+  - `pip install -r requirements.txt`
+- run the code
+  - `python airscraper/airscraper.py [url]`
+
 ## Examples
+
+### As CLI
+
 ``` Bash
 # Print Result to Terminal
 python airscraper/airscraper.py [url]
@@ -39,6 +49,29 @@ python airscraper/airscraper.py [url]
 # Pipe the result to csv file
 python airscraper/airscraper.py [url] > [filename].csv
 
+```
+
+### As Python Package
+
+``` Python
+from airscraper import AirScraper
+
+client = AirScraper([url])
+data = client.getTable().text
+
+# print the result
+print(data)
+
+# save as file
+with open('data.csv','w') as f:
+  f.write(data)
+
+# use it with pandas
+from io import StringIO
+import pandas as pd
+
+df = pd.read_csv(StringIO(data), sep=',')
+df.head()
 ```
 
 ## Help
