@@ -59,7 +59,7 @@ python airscraper/airscraper.py [url] > [filename].csv
 from airscraper import AirScraper
 
 client = AirScraper([url])
-data = client.getTable().text
+data = client.get_table().text
 
 # print the result
 print(data)
