@@ -10,6 +10,7 @@ Use it if:
 ## Requirements
 Because its a simple scraper, basically only beautifulsoup is needed
 - BeautifulSoup4
+- Pandas
 
 ## Installation
 
@@ -104,4 +105,32 @@ Currently I'm thinking of several things in mind:
   - It turns out there are a lot of resources [out there](https://dzone.com/articles/executable-package-pip-install) if you know what to look for :)
 
 ## Contributing
-If you have similar problem oor have any idea to improve this package please let me know in the issues or just hit me up on twitter [@BanditelolRP](https://twitter.com/banditelolRP)
+If you have similar problem or have any idea to improve this package please let me know in the issues or just hit me up on twitter [@BanditelolRP](https://twitter.com/banditelolRP)
+
+### Development
+
+If you're going to try to develop it yourself, here's my overall workflow
+
+**1. Create a virtual environment**
+
+I usually used `venv` on python 3.8 to create a new virtualenvironment
+
+```bash
+python -m venv venv
+# and activate the environment
+source venv/bin/activate
+```
+
+**2. Create a virtual environment**
+
+Install necessary requirements and install the package for development using editable
+
+```bash
+pip install wheels pytest -q
+pip install -r requirements.txt
+pip install -e .
+```
+
+**3. Play around with the code**
+
+You can browse the notebook for explanation on how it works and some example use case, and I really appreciate helps in documentation and testing. Have fun!

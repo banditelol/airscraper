@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='airscraper',
-    version='0.1.3',
+    version='0.1.4',
     author="Aditya Rachman Putra",
     author_email="adityarputra@gmail.com",
     description="Airtable Download CSV helper",
@@ -26,6 +26,7 @@ setuptools.setup(
     ],
     install_requires=[
           'beautifulsoup4',
+          'pandas',
     ]
 
  )
